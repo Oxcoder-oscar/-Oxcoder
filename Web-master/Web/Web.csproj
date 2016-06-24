@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56B95463-5816-4E0F-8AF3-C834946E9A28}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_AddQuiz.aspx.cs">
+      <DependentUpon>Admin_AddQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_AddQuiz.aspx.designer.cs">
+      <DependentUpon>Admin_AddQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Challenge.aspx.cs">
+      <DependentUpon>Admin_Challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Challenge.aspx.designer.cs">
+      <DependentUpon>Admin_Challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Challenge_Item.aspx.cs">
+      <DependentUpon>Admin_Challenge_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Challenge_Item.aspx.designer.cs">
+      <DependentUpon>Admin_Challenge_Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Enterprise.aspx.cs">
+      <DependentUpon>Admin_Enterprise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Enterprise.aspx.designer.cs">
+      <DependentUpon>Admin_Enterprise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forgot_Password.aspx.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Forgot_Password.aspx.designer.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forgot_Password_Sub.aspx.cs">
+      <DependentUpon>Forgot_Password_Sub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Forgot_Password_Sub.aspx.designer.cs">
+      <DependentUpon>Forgot_Password_Sub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Register_Sub.aspx.cs">
+      <DependentUpon>Register_Sub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Register_Sub.aspx.designer.cs">
+      <DependentUpon>Register_Sub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Reset_Password.aspx.cs">
+      <DependentUpon>Reset_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Reset_Password.aspx.designer.cs">
+      <DependentUpon>Reset_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Reset_Password_Before.aspx.cs">
+      <DependentUpon>Reset_Password_Before.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Reset_Password_Before.aspx.designer.cs">
+      <DependentUpon>Reset_Password_Before.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Buy.aspx.cs">
+      <DependentUpon>Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Buy.aspx.designer.cs">
+      <DependentUpon>Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Change_Enterprice_Password.aspx.cs">
+      <DependentUpon>Change_Enterprice_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Change_Enterprice_Password.aspx.designer.cs">
+      <DependentUpon>Change_Enterprice_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Charge.aspx.cs">
+      <DependentUpon>Charge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Charge.aspx.designer.cs">
+      <DependentUpon>Charge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Enterprice_Index.aspx.cs">
+      <DependentUpon>Enterprice_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Enterprice_Index.aspx.designer.cs">
+      <DependentUpon>Enterprice_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\FillEnterpriceInfo.aspx.cs">
+      <DependentUpon>FillEnterpriceInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\FillEnterpriceInfo.aspx.designer.cs">
+      <DependentUpon>FillEnterpriceInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\FillEnterpriceInfo2.aspx.cs">
+      <DependentUpon>FillEnterpriceInfo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\FillEnterpriceInfo2.aspx.designer.cs">
+      <DependentUpon>FillEnterpriceInfo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Invite.aspx.cs">
+      <DependentUpon>Invite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Invite.aspx.designer.cs">
+      <DependentUpon>Invite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\PublishChallenge_BaseInfo.aspx.cs">
+      <DependentUpon>PublishChallenge_BaseInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\PublishChallenge_BaseInfo.aspx.designer.cs">
+      <DependentUpon>PublishChallenge_BaseInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\PublishChallenge_ChooseQuiz.aspx.cs">
+      <DependentUpon>PublishChallenge_ChooseQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\PublishChallenge_ChooseQuiz.aspx.designer.cs">
+      <DependentUpon>PublishChallenge_ChooseQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Recruit_list.aspx.cs">
+      <DependentUpon>Recruit_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Recruit_list.aspx.designer.cs">
+      <DependentUpon>Recruit_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Register_enterprice_Success.aspx.cs">
+      <DependentUpon>Register_enterprice_Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Register_enterprice_Success.aspx.designer.cs">
+      <DependentUpon>Register_enterprice_Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Register_ReSuccess_Before.aspx.cs">
+      <DependentUpon>Register_ReSuccess_Before.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Register_ReSuccess_Before.aspx.designer.cs">
+      <DependentUpon>Register_ReSuccess_Before.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprice\Resume.aspx.cs">
+      <DependentUpon>Resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprice\Resume.aspx.designer.cs">
+      <DependentUpon>Resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Battle.aspx.cs">
+      <DependentUpon>Battle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Battle.aspx.designer.cs">
+      <DependentUpon>Battle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Challenge.aspx.cs">
+      <DependentUpon>Challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Challenge.aspx.designer.cs">
+      <DependentUpon>Challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Change_Password.aspx.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Change_Password.aspx.designer.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Register_Success.aspx.cs">
+      <DependentUpon>Register_Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Register_Success.aspx.designer.cs">
+      <DependentUpon>Register_Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Register_Success_Before.aspx.cs">
+      <DependentUpon>Register_Success_Before.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Register_Success_Before.aspx.designer.cs">
+      <DependentUpon>Register_Success_Before.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Center.aspx.cs">
+      <DependentUpon>User_Center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Center.aspx.designer.cs">
+      <DependentUpon>User_Center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Challenge.aspx.cs">
+      <DependentUpon>User_Challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Challenge.aspx.designer.cs">
+      <DependentUpon>User_Challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Corp_Detail.aspx.cs">
+      <DependentUpon>User_Corp_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Corp_Detail.aspx.designer.cs">
+      <DependentUpon>User_Corp_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_History.aspx.cs">
+      <DependentUpon>User_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_History.aspx.designer.cs">
+      <DependentUpon>User_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Index.aspx.cs">
+      <DependentUpon>User_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Index.aspx.designer.cs">
+      <DependentUpon>User_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Info.aspx.cs">
+      <DependentUpon>User_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Info.aspx.designer.cs">
+      <DependentUpon>User_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_NextQuiz.aspx.cs">
+      <DependentUpon>User_NextQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_NextQuiz.aspx.designer.cs">
+      <DependentUpon>User_NextQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Result.aspx.cs">
+      <DependentUpon>User_Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Result.aspx.designer.cs">
+      <DependentUpon>User_Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Test.aspx.cs">
+      <DependentUpon>User_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Test.aspx.designer.cs">
+      <DependentUpon>User_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Test_Compile.aspx.cs">
+      <DependentUpon>User_Test_Compile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Test_Compile.aspx.designer.cs">
+      <DependentUpon>User_Test_Compile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User_Test_Quiz.aspx.cs">
+      <DependentUpon>User_Test_Quiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User_Test_Quiz.aspx.designer.cs">
+      <DependentUpon>User_Test_Quiz.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\Admin_AddQuiz.aspx" />
+    <Content Include="Admin\Admin_Challenge.aspx" />
+    <Content Include="Admin\Admin_Challenge_Item.aspx" />
+    <Content Include="Admin\Admin_Enterprise.aspx" />
+    <Content Include="Common\Customers.html" />
+    <Content Include="Common\Enterprice_menu.html" />
+    <Content Include="Common\Enterprise.html" />
+    <Content Include="Common\Enterprise_menu.html" />
+    <Content Include="Common\footer.html" />
+    <Content Include="Common\Forgot_Password.aspx" />
+    <Content Include="Common\Forgot_Password_Sub.aspx" />
+    <Content Include="Common\header.html" />
+    <Content Include="Common\Header_Test.html" />
+    <Content Include="Common\Login.aspx" />
+    <Content Include="Common\Register.aspx" />
+    <Content Include="Common\Register_Sub.aspx" />
+    <Content Include="Common\Reset_Password.aspx" />
+    <Content Include="Common\Reset_Password_Before.aspx" />
+    <Content Include="Common\User_Index_Footer.html" />
+    <Content Include="Common\User_menu.html" />
+    <Content Include="Common\Index.html" />
+    <Content Include="Common\Reports.html" />
+    <Content Include="Common\Share1.html" />
+    <Content Include="Common\Share2.html" />
+    <Content Include="Enterprice\Account.aspx" />
+    <Content Include="Enterprice\Buy.aspx" />
+    <Content Include="Enterprice\Change_Enterprice_Password.aspx" />
+    <Content Include="Enterprice\Charge.aspx" />
+    <Content Include="Enterprice\Enterprice_Index.aspx" />
+    <Content Include="Enterprice\FillEnterpriceInfo.aspx" />
+    <Content Include="Enterprice\FillEnterpriceInfo2.aspx" />
+    <Content Include="Enterprice\History.aspx" />
+    <Content Include="Enterprice\Invite.aspx" />
+    <Content Include="Enterprice\PublishChallenge_BaseInfo.aspx" />
+    <Content Include="Enterprice\PublishChallenge_ChooseQuiz.aspx" />
+    <Content Include="Enterprice\Recruit_list.aspx" />
+    <Content Include="Enterprice\Register_enterprice_Success.aspx" />
+    <Content Include="Enterprice\Register_ReSuccess_Before.aspx" />
+    <Content Include="Enterprice\Resume.aspx" />
+    <Content Include="Public\CSS\carousel.css" />
+    <Content Include="Public\CSS\font-awesome.min.css" />
+    <Content Include="Public\CSS\hover.css" />
+    <Content Include="Public\CSS\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Public\CSS\max.css" />
+    <Content Include="Public\CSS\my_style.css" />
+    <Content Include="Public\CSS\style.css" />
+    <Content Include="Public\CSS\style_new.css" />
+    <Content Include="Public\CSS\theme.min.css" />
+    <Content Include="Public\CSS\tourist.css" />
+    <Content Include="Public\CSS\video-js.css" />
+    <Content Include="Public\Fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Public\Images\01.png" />
+    <Content Include="Public\Images\03495419c4679ebcca8ff00e8d05c1ecaadf1259.jpg" />
+    <Content Include="Public\Images\1.png" />
+    <Content Include="Public\Images\1001.jpg" />
+    <Content Include="Public\Images\1014.jpg" />
+    <Content Include="Public\Images\1020.jpg" />
+    <Content Include="Public\Images\1029.png" />
+    <Content Include="Public\Images\1033.jpg" />
+    <Content Include="Public\Images\1041.jpg" />
+    <Content Include="Public\Images\1043.jpg" />
+    <Content Include="Public\Images\1044.jpg" />
+    <Content Include="Public\Images\1046.jpeg" />
+    <Content Include="Public\Images\1048.jpg" />
+    <Content Include="Public\Images\1052.png" />
+    <Content Include="Public\Images\1056.jpg" />
+    <Content Include="Public\Images\1058.jpg" />
+    <Content Include="Public\Images\1060.jpg" />
+    <Content Include="Public\Images\1062.jpg" />
+    <Content Include="Public\Images\1063.png" />
+    <Content Include="Public\Images\1064.png" />
+    <Content Include="Public\Images\1209.bmp" />
+    <Content Include="Public\Images\1405975_175937039_2.jpg" />
+    <Content Include="Public\Images\447.jpg" />
+    <Content Include="Public\Images\48.jpg" />
+    <Content Include="Public\Images\663.png" />
+    <Content Include="Public\Images\829.jpg" />
+    <Content Include="Public\Images\930.jpg" />
+    <Content Include="Public\Images\960.png" />
+    <Content Include="Public\Images\974.jpg" />
+    <Content Include="Public\Images\977.jpg" />
+    <Content Include="Public\Images\981.png" />
+    <Content Include="Public\Images\984.jpg" />
+    <Content Include="Public\Images\987.jpg" />
+    <Content Include="Public\Images\988.png" />
+    <Content Include="Public\Images\989.PNG" />
+    <Content Include="Public\Images\991.png" />
+    <Content Include="Public\Images\android.png" />
+    <Content Include="Public\Images\apple.png" />
+    <Content Include="Public\Images\Bitmap3.png" />
+    <Content Include="Public\Images\c.png" />
+    <Content Include="Public\Images\code.png" />
+    <Content Include="Public\Images\comic.jpg" />
+    <Content Include="Public\Images\corp.png" />
+    <Content Include="Public\Images\corp_step1.png" />
+    <Content Include="Public\Images\corp_step2.png" />
+    <Content Include="Public\Images\cpp.png" />
+    <Content Include="Public\Images\csdn2.png" />
+    <Content Include="Public\Images\d039a653ca17abfd3f2ce16f359be4b9a5d19aa5.jpg" />
+    <Content Include="Public\Images\d58ae1bd78d7cc44d53b7c10d2e4efba803d2b23.jpg" />
+    <Content Include="Public\Images\default.jpg" />
+    <Content Include="Public\Images\github2.png" />
+    <Content Include="Public\Images\hexun.png" />
+    <Content Include="Public\Images\indexpic.png" />
+    <Content Include="Public\Images\java.png" />
+    <Content Include="Public\Images\lake.jpg" />
+    <Content Include="Public\Images\languages.png" />
+    <Content Include="Public\Images\logowall.png" />
+    <Content Include="Public\Images\new_c1.png" />
+    <Content Include="Public\Images\new_c2.png" />
+    <Content Include="Public\Images\office.png" />
+    <Content Include="Public\Images\php.png" />
+    <Content Include="Public\Images\pic.gif" />
+    <Content Include="Public\Images\platform.png" />
+    <Content Include="Public\Images\python.png" />
+    <Content Include="Public\Images\quora2.png" />
+    <Content Include="Public\Images\school.png" />
+    <Content Include="Public\Images\sf2.png" />
+    <Content Include="Public\Images\sina2.png" />
+    <Content Include="Public\Images\stackoverflow2.png" />
+    <Content Include="Public\Images\tianji.png" />
+    <Content Include="Public\Images\waiting.gif" />
+    <Content Include="Public\Images\webfigure.png" />
+    <Content Include="Public\Images\website4.png" />
+    <Content Include="Public\Images\website5.png" />
+    <Content Include="Public\Images\website6.png" />
+    <Content Include="Public\Images\website7.png" />
+    <Content Include="Public\Images\wlogo.png" />
+    <Content Include="Public\Images\wlogo_sm.png" />
+    <Content Include="Public\Images\zhihu2.png" />
+    <Content Include="Public\JS\ace.js" />
+    <Content Include="Public\JS\avalon.js" />
+    <Content Include="Public\JS\bootstrap-filestyle.js" />
+    <Content Include="Public\JS\bootstrap-select.min.js" />
+    <Content Include="Public\JS\bootstrap-switch.min.js" />
+    <Content Include="Public\JS\bootstrap.js" />
+    <Content Include="Public\JS\bootstrap.min.js" />
+    <Content Include="Public\JS\bootstrapValidator.js" />
+    <Content Include="Public\JS\browser.js" />
+    <Content Include="Public\JS\Chart.js" />
+    <Content Include="Public\JS\codingConstant.js" />
+    <Content Include="Public\JS\codingProjectInfo.js" />
+    <Content Include="Public\JS\codingStatistics.js" />
+    <Content Include="Public\JS\codingUI.js" />
+    <Content Include="Public\JS\ext-language_tools.js" />
+    <Content Include="Public\JS\font-awesome.min.css" />
+    <Content Include="Public\JS\history.js" />
+    <Content Include="Public\JS\index.js" />
+    <Content Include="Public\JS\jquery-1.11.0.min.js" />
+    <Content Include="Public\JS\jquery-1.11.1.min.js" />
+    <Content Include="Public\JS\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="Public\JS\jquery.city.select.js" />
+    <Content Include="Public\JS\jquery.sparkline.min.js" />
+    <Content Include="Public\JS\manitoNoteChallengePHP.js" />
+    <Content Include="Public\JS\masnunit-customers.js" />
+    <Content Include="Public\JS\masnunit.js" />
+    <Content Include="Public\JS\mode-java.js" />
+    <Content Include="Public\JS\mode-php.js" />
+    <Content Include="Public\JS\myEditorChallengePHP.js" />
+    <Content Include="Public\JS\script.js" />
+    <Content Include="Public\JS\statistics-challenge.js" />
+    <Content Include="Public\JS\summernote.min.js" />
+    <Content Include="Public\JS\tabswitch.js" />
+    <Content Include="Public\JS\template.min.js" />
+    <Content Include="Public\JS\theme-idle_fingers.js" />
+    <Content Include="Public\JS\video.js" />
+    <Content Include="Public\JS\waiting.gif" />
+    <Content Include="Public\JS\woo-customers.js" />
+    <Content Include="Public\JS\woo.js" />
+    <Content Include="User\Battle.aspx" />
+    <Content Include="User\Challenge.aspx" />
+    <Content Include="User\Change_Password.aspx" />
+    <Content Include="User\Register_Success.aspx" />
+    <Content Include="User\Register_Success_Before.aspx" />
+    <Content Include="User\User_Center.aspx" />
+    <Content Include="User\User_Challenge.aspx" />
+    <Content Include="User\User_Corp_Detail.aspx" />
+    <Content Include="User\User_History.aspx" />
+    <Content Include="User\User_Index.aspx" />
+    <Content Include="User\User_Info.aspx" />
+    <Content Include="User\User_NextQuiz.aspx" />
+    <Content Include="User\User_Result.aspx" />
+    <Content Include="User\User_Test.aspx" />
+    <Content Include="User\User_Test_Compile.aspx" />
+    <Content Include="User\User_Test_Quiz.aspx" />
+    <Content Include="web.config" />
+    <Content Include="Public\Images\03495419c4679ebcca8ff00e8d05c1ecaadf1259" />
+    <Content Include="Public\Images\d039a653ca17abfd3f2ce16f359be4b9a5d19aa5" />
+    <Content Include="Public\Images\d58ae1bd78d7cc44d53b7c10d2e4efba803d2b23" />
+    <Content Include="Public\JS\cityjson" />
+    <Content Include="Public\JS\core.php" />
+    <Content Include="Public\JS\z_stat.php" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ff039ef6-3765-49a8-af4d-3f34f56e1e56}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OxcoderBL\OxcoderBL.csproj">
+      <Project>{7a8dde0a-9a58-410a-9851-d20316f27d78}</Project>
+      <Name>OxcoderBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OxcoderIBL\OxcoderIBL.csproj">
+      <Project>{46200a9a-2cab-42a8-9d84-4508d5dda572}</Project>
+      <Name>OxcoderIBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:27067/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
